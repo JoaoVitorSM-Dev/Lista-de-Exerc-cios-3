@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Feedback</title>
+    <style>
+        /* Estilos simples para melhorar a legibilidade */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que padding não afete a largura total */
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <h2>Deixe seu Feedback</h2>
+
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome_usuario" required>
+        </div>
+
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email_usuario" required>
+        </div>
+
+        <div>
+            <label for="endereco">Endereço Completo:</label>
+            <textarea id="endereco" name="endereco_usuario" rows="3" required></textarea>
+        </div>
+
+        <div>
+            <label for="tipo_feedback">Tipo de Feedback:</label>
+            <select id="tipo_feedback" name="tipo_feedback">
+                <option value="elogio">Elogio</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="critica">Crítica</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="feedback">Seu Feedback:</label>
+            <textarea id="feedback" name="mensagem_feedback" rows="6" required></textarea>
+        </div>
+
+        <button type="submit">Enviar Feedback</button>
+
+    </form>
+
+</body>
+</html>
